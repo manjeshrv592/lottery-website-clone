@@ -18,6 +18,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
+    <!-- Swiper JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>Home | Lottery website clone</title>
@@ -35,6 +41,33 @@
         ></a>
       </header>
       <!-- Header end -->
+
+      <!-- Main start -->
+      <main class="main">
+        <!-- Section hero start -->
+        <section class="section-hero">
+          <!-- Slider main container -->
+          <div class="swiper hero-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="./img/hero-1.png" alt="Hero slider" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/hero-2.png" alt="Hero slider" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./img/hero-3.png" alt="Hero slider" />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!-- Section hero end -->
+      </main>
+      <!-- Main end -->
 
       <!-- Bottom nav start -->
       <footer class="footer">
@@ -104,6 +137,9 @@
     </div>
     <!-- Mobile frame start -->
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- JS -->
     <script src="./js/script.js"></script>
   </body>
 </html>
