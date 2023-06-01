@@ -4,6 +4,8 @@
   /* Colors */
   --orange: #ff9900;
   --orange-dark: #e57201;
+  --blue: #71c0ff;
+  --blue-dark: #1949ee;
   --grey-50: #eceff1;
   --grey-100: #cfd8dc;
   --grey-200: #b0bec5;
@@ -22,6 +24,8 @@
     var(--orange),
     var(--orange-dark)
   );
+
+  --blue-gradient: linear-gradient(to bottom, var(--blue), var(--blue-dark));
 
   /* Fonts */
   --font-body: 'Inter', sans-serif;
@@ -60,6 +64,29 @@ a {
 }
 
 /********************************/
+/* BOOTSTRAP OVERRIDES */
+.container {
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+.btn {
+  font-size: 1.2rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-image: var(--orange-gradient);
+  border: none;
+  outline: none;
+}
+
+/********************************/
 /* MAIN LAYOUT */
 
 /* Mobile frame */
@@ -68,7 +95,7 @@ a {
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--white);
+  background-color: #fbfcfd;
   min-height: 100vh;
   position: relative;
 }
@@ -98,7 +125,7 @@ a {
 .footer {
   padding-left: 2.4rem;
   padding-right: 2.4rem;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -169,7 +196,7 @@ a {
 
 /* Floating menu */
 .floating-nav {
-  position: absolute;
+  position: fixed;
   right: 1.2rem;
   bottom: 10rem;
 }
@@ -210,6 +237,12 @@ a {
   aspect-ratio: 2 / 1;
 }
 
+.hero-footer {
+  display: grid;
+  grid-template-columns: 1rem 1fr max-content;
+  grid-gap: 1rem;
+}
+
 /* Swiper */
 .swiper-pagination-bullet {
   opacity: 0.3;
@@ -225,4 +258,45 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+/********************************/
+/* COMPONENTS */
+
+/* Card game */
+.card-game-img {
+  background-image: var(--blue-gradient);
+  border-radius: 50%;
+}
+
+/* Scroll text */
+.scroll-text-wrapper {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.scroll-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  grid-template-columns: max-content;
+  animation: scrollText 35s 3s infinite linear;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+/********************************/
+/* UTILS CLASSES */
+.text-primary {
+  color: var(--orange-dark) !important;
 }
