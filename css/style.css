@@ -98,6 +98,7 @@ a {
   background-color: #fbfcfd;
   min-height: 100vh;
   position: relative;
+  padding-bottom: 10rem;
 }
 
 /* Header */
@@ -130,6 +131,7 @@ a {
   left: 0;
   width: 100%;
   background-color: var(--white);
+  z-index: 100;
 }
 
 .footer-list {
@@ -199,6 +201,7 @@ a {
   position: fixed;
   right: 1.2rem;
   bottom: 10rem;
+  z-index: 100;
 }
 
 .floating-list {
@@ -282,7 +285,7 @@ a {
   top: 0;
   display: grid;
   grid-template-columns: max-content;
-  animation: scrollText 35s 3s infinite linear;
+  animation: scrollText 50s infinite linear;
 }
 
 @keyframes scrollText {
@@ -293,6 +296,48 @@ a {
   100% {
     transform: translateX(-120%);
   }
+}
+
+/* Lotter card */
+.lottery-icon {
+  width: 2rem;
+}
+
+.lottery-card {
+  background-color: var(--white);
+  border-radius: 1.2rem;
+  position: relative;
+
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.lottery-card-header {
+  padding: 2rem 1.6rem;
+  background-image: url('./../img/lottery-card-bg.png'), var(--blue-gradient);
+  background-size: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+.lottery-card-img {
+  position: absolute;
+  width: 10rem;
+  right: 0;
+  top: 0;
+  transform: translate(0.5rem, -1rem);
+}
+
+.lottery-card-footer {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+.lottery-card-footer img {
+  width: 2.4rem;
+}
+
+.lottery-card-slider {
+  height: 2.6rem;
 }
 
 /********************************/
