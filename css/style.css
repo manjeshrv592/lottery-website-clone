@@ -1,0 +1,93 @@
+/********************************/
+/* CUSTOM PROPERTIES */
+:root {
+  /* Colors */
+  --orange: #ff9900;
+  --orange-dark: #e57201;
+  --grey-50: #eceff1;
+  --grey-100: #cfd8dc;
+  --grey-200: #b0bec5;
+  --grey-300: #90a4ae;
+  --grey-400: #78909c;
+  --grey-500: #607d8b;
+  --grey-600: #546e7a;
+  --grey-700: #455a64;
+  --grey-800: #37474f;
+  --grey-900: #263238;
+  --white: #fff;
+  --black: #000;
+
+  /* Fonts */
+  --font-body: 'Inter', sans-serif;
+}
+
+/********************************/
+/* BASIC RESET */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--grey-dark);
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 300;
+  background-color: var(--grey-200);
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/********************************/
+/* MAIN LAYOUT */
+
+/* Mobile frame */
+.mobile-frame {
+  width: 100%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--white);
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-image: linear-gradient(
+    to right,
+    var(--orange),
+    var(--orange-dark)
+  );
+
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header-logo {
+  width: 10rem;
+}
+
+.header-download {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  right: 2.4rem;
+}
